@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="index.js" defer></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <input
+        type="text"
+        id="busca"
+        placeholder="Pesquisar por título"
+        onkeyup="pesquisarTarefas()"
+      />
+    </header>
+
+    <main>
+      <section id="tarefas">
+        <h2>
+          Tarefas
+          <button type="button" onclick="abrirModal()">Nova tarefa</button>
+        </h2>
+
+        <h6 id="mensagemVazia">Nenhuma tarefa registrada</h6>
+        <ul id="lista"></ul>
+      </section>
+    </main>
+
+    <section id="overlay" onclick="fecharModal()"></section>
+
+    <div class="modal" id="criarTarefa">
+      <form onsubmit="novaTarefa(event)">
+        <h3>
+          Criar tarefa
+          <box-icon name="x" onclick="fecharModal()"></box-icon>
+        </h3>
+
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" required />
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" required></textarea>
+
+        <button type="submit">Criar</button>
+      </form>
+    </div>
+  </body>
+</html>

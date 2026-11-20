@@ -1,0 +1,12 @@
+{
+  "name": "lista-de-tarefas",
+  "version": "1.0.0",
+  "description": "Projeto de lista de tarefas desenvolvido com HTML, CSS, JavaScript e JSON Server.",
+  "private": true,
+  "scripts": {
+    "api": "json-server --watch db.json --port 3000"
+  },
+  "dependencies": {
+    "json-server": "0.17.4"
+  }
+}
